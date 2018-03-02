@@ -8,8 +8,7 @@ def random_numbers(nmin, nmax):
         n = randint(0, 1000)
         randNums.append(n)
 
-    return randNums
-        
+    return randNums        
 
 def random_primes(nmin, nmax):
 
@@ -33,6 +32,4 @@ def random_primes(nmin, nmax):
                 randPrimes.append(n)
                 param = True        
 
-    return randPrimes
-
-    
+    return randPrimes  
