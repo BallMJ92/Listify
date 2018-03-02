@@ -1,8 +1,19 @@
 from random import randint
 
+def random_numbers(nmin, nmax):
+
+    randNums = []
+
+    for i in range(nmin, nmax):
+        n = randint(0, 1000)
+        randNums.append(n)
+
+    return randNums
+        
+
 def random_primes(nmin, nmax):
 
-    primeList = []        
+    randPrimes = []        
 
     def recPrime(i):
         def primeDetect(i, x):
@@ -19,8 +30,9 @@ def random_primes(nmin, nmax):
         while param == False:
             n = randint(0, 1000)
             if recPrime(n) == True:
-                primeList.append(n)
+                randPrimes.append(n)
                 param = True        
 
-    return primeList
+    return randPrimes
 
+    
