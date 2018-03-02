@@ -1,3 +1,3 @@
 # Listify
 
-A Python module containing functions for generating any kind of list
+A Python module containing functions for generating a variety of numerical lists
