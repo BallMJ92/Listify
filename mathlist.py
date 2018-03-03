@@ -1,9 +1,7 @@
 def prime_numbers(nmin, nmax):
-
     primeList = []        
 
-    def recPrime(i):
-                
+    def recPrime(i):                
         def primeDetect(i, x):
             if x == 1:
                 return True
@@ -12,27 +10,23 @@ def prime_numbers(nmin, nmax):
                     
         return primeDetect(i, i-1)
 
-    for i in range(nmin, nmax):            
-
+    for i in range(nmin, nmax):  
         if recPrime(i) == True:
             primeList.append(i)            
 
     return primeList
     
 def cube_numbers(nmin, nmax):
-
     cubeList = [i**3 for i in range(nmin, nmax)]
 
     return cubeList
     
 def square_numbers(nmin, nmax):
-
     squareList = [i**2 for i in range(nmin, nmax)]
 
     return squareList
     
 def factors(nmin, nmax):
-
     factorList = []
 
     def recFactoring(x):
@@ -47,7 +41,6 @@ def factors(nmin, nmax):
     return factorList
 
 def even_numbers(nmin, nmax):
-
     evenList = []
 
     def recEven(x, y):
@@ -64,7 +57,6 @@ def even_numbers(nmin, nmax):
     return evenList
 
 def odd_numbers(nmin, nmax):
-
     oddList = []
 
     def recOdd(x, y):
