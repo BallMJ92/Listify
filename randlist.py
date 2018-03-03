@@ -4,6 +4,7 @@ def random_numbers(nmin, nmax):
     randNums = []
 
     for i in range(nmin, nmax):
+        # Change randint limit from 1000 to your own predefined value
         n = randint(0, 1000)
         randNums.append(n)
 
