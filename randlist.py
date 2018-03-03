@@ -1,7 +1,6 @@
 from random import randint
 
 def random_numbers(nmin, nmax):
-
     randNums = []
 
     for i in range(nmin, nmax):
@@ -11,7 +10,6 @@ def random_numbers(nmin, nmax):
     return randNums        
 
 def random_primes(nmin, nmax):
-
     randPrimes = []        
 
     def recPrime(i):
@@ -22,8 +20,7 @@ def random_primes(nmin, nmax):
                 return i % x != 0 and primeDetect(i, x-1)                    
         return primeDetect(i, i-1)
 
-    for i in range(nmin, nmax):
-        
+    for i in range(nmin, nmax):        
         param = False
 
         while param == False:
