@@ -4,8 +4,7 @@ def random_numbers(nmin, nmax):
     randNums = []
 
     for i in range(nmin, nmax):
-        # Change randint limit from 1000 to your own predefined value
-        n = randint(0, 1000)
+        n = randint(-1000, 1000)
         randNums.append(n)
 
     return randNums        
@@ -31,6 +30,15 @@ def random_primes(nmin, nmax):
                 param = True        
 
     return randPrimes
+
+def random_positives(nmin, nmax):
+    randPos = []
+
+    for i in range(nmin, nmax):
+        n = randint(0, 1000)
+        randPos.append(n)
+
+    return randPos
 
 def random_negatives(nmin, nmax):
     randNeg = []
@@ -69,3 +77,39 @@ def random_hex(nmin, nmax):
         randHex.append(y)
 
     return randHex
+
+def random_number_matrix(nmin, nmax, depth):
+    randNumMatrix = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = randint(-1000, 1000)
+            d.append(x)
+        randNumMatrix.append(d)
+
+    return randNumMatrix
+
+def random_positive_matrix(nmin, nmax, depth):
+    randPosMatrix = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = randint(0, 1000)
+            d.append(x)
+        randPosMatrix.append(d)
+
+    return randPosMatrix
+
+def random_negative_matrix(nmin, nmax, depth):
+    randNegMatrix = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = randint(-1000, 0)
+            d.append(x)
+        randNegMatrix.append(d)
+
+    return randNegMatrix
