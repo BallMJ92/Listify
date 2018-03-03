@@ -220,9 +220,41 @@ def random_dec_matrix(nmin, nmax, depth):
     for i in range(nmin, nmax):
         d = []
         for n in range(depth):
-            x = float(randint(0, 1000) + Decimal(random() / random()))
+            x = float(randint(-1000, 1000) + Decimal(random() / random()))
             d.append(x)
         randDecMat.append(d)
 
     return randDecMat
+
+def random_positive_dec_matrix(nmin, nmax, depth):
+    """Generates a matrix of random positive decimal values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
+    randPosDecMat = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = float(randint(0, 1000) + Decimal(random() / random()))
+            d.append(x)
+        randPosDecMat.append(d)
+
+    return randPosDecMat
+
+def random_negative_dec_matrix(nmin, nmax, depth):
+    """Generates a matrix of random negative decimal values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
+    randNegDecMat = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = float(randint(-1000, 0) + Decimal(random() / random()))
+            d.append(x)
+        randNegDecMat.append(d)
+
+    return randNegDecMat
 
