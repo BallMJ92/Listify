@@ -49,20 +49,12 @@ def random_negatives(nmin, nmax):
 
     return randNeg
 
-def random_posneg(nmin, nmax):
-    randMix = []
-
-    for i in range(nmin, nmax):
-        n = randint(-1000, 1000)
-        randMix.append(n)
-
-    return randMix
 
 def random_binary(nmin, nmax):
     randBin = []
 
     for i in range(nmin, nmax):
-        n = randint(0, 1000)
+        n = randint(-1000, 1000)
         y = bin(n)
         randBin.append(y)
 
@@ -72,7 +64,7 @@ def random_hex(nmin, nmax):
     randHex = []
 
     for i in range(nmin, nmax):
-        n = randint(0, 1000)
+        n = randint(-1000, 1000)
         y = hex(n)
         randHex.append(y)
 
@@ -113,3 +105,26 @@ def random_negative_matrix(nmin, nmax, depth):
         randNegMatrix.append(d)
 
     return randNegMatrix
+
+def random_binary_matrix(nmin, nmax, depth):
+    randBinMat = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = randint(0, 1000)
+            d.append(bin(x))
+        randBinMat.append(d)
+
+    return randBinMat
+
+def random_hex_matrix(nmin, nmax, depth):
+    randHexMat = []
+
+    for i in range(nmin, nmax):
+        for n in range(depth):
+            x = randint(0, 1000)
+            d.append(hex(x))
+        randHexMat.append(d)
+
+    return randHexMat
