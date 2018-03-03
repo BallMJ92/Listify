@@ -1,7 +1,6 @@
 # Listify
 
-A Python module containing functions for generating a variety of numerical lists.
+A Python module containing functions for generating a variety of predefined or semi-random numerical data sets.
 
-**Files**
+**nlist** - *Contains functions for generating a variety of numerical lists*
 
-nlist - Contains functions for generating a variety of numerical lists
