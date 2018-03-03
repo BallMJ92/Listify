@@ -1,6 +1,9 @@
 from random import randint
 
 def random_numbers(nmin, nmax):
+    """Generates a list of random numbers between
+    nmin and nmax
+    """
     randNums = []
 
     for i in range(nmin, nmax):
@@ -10,6 +13,9 @@ def random_numbers(nmin, nmax):
     return randNums        
 
 def random_primes(nmin, nmax):
+    """Generates a list of random prime numbers between
+    nmin and nmax
+    """
     randPrimes = []        
 
     def recPrime(i):
@@ -32,6 +38,9 @@ def random_primes(nmin, nmax):
     return randPrimes
 
 def random_positives(nmin, nmax):
+    """Generate a list of random positive numbers between
+    nmin and nmax
+    """
     randPos = []
 
     for i in range(nmin, nmax):
@@ -41,6 +50,9 @@ def random_positives(nmin, nmax):
     return randPos
 
 def random_negatives(nmin, nmax):
+    """Generates a list of random negative numbers between
+    nmin and nmax
+    """
     randNeg = []
 
     for i in range(nmin, nmax):
@@ -51,6 +63,9 @@ def random_negatives(nmin, nmax):
 
 
 def random_binary(nmin, nmax):
+    """Generates a list of random binary values derived
+    from random numbers between nmin and nmax
+    """
     randBin = []
 
     for i in range(nmin, nmax):
@@ -61,6 +76,9 @@ def random_binary(nmin, nmax):
     return randBin
 
 def random_hex(nmin, nmax):
+    """Generates a list of random hexadecimal values derived
+    from random numbers between nmin and nmax
+    """
     randHex = []
 
     for i in range(nmin, nmax):
@@ -71,6 +89,10 @@ def random_hex(nmin, nmax):
     return randHex
 
 def random_number_matrix(nmin, nmax, depth):
+    """Generates a matrix of random numbers between
+    nmin and nmax with the depth of the matrix defined
+    by depth variable
+    """
     randNumMatrix = []
 
     for i in range(nmin, nmax):
@@ -83,6 +105,10 @@ def random_number_matrix(nmin, nmax, depth):
     return randNumMatrix
 
 def random_positive_matrix(nmin, nmax, depth):
+    """Generates a matrix of random positive numbers between
+    nmin and nmax with the depth of the matrix defined
+    by depth variable
+    """
     randPosMatrix = []
 
     for i in range(nmin, nmax):
@@ -95,6 +121,10 @@ def random_positive_matrix(nmin, nmax, depth):
     return randPosMatrix
 
 def random_negative_matrix(nmin, nmax, depth):
+    """Generates a matrix of random negative numbers between
+    nmin and nmax with the depth of the matrix defined
+    by depth variable
+    """
     randNegMatrix = []
 
     for i in range(nmin, nmax):
@@ -107,6 +137,10 @@ def random_negative_matrix(nmin, nmax, depth):
     return randNegMatrix
 
 def random_binary_matrix(nmin, nmax, depth):
+    """Generates a matrix of random binary values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
     randBinMat = []
 
     for i in range(nmin, nmax):
@@ -119,6 +153,10 @@ def random_binary_matrix(nmin, nmax, depth):
     return randBinMat
 
 def random_hex_matrix(nmin, nmax, depth):
+    """Generates a matrix of random hexadecimal values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
     randHexMat = []
 
     for i in range(nmin, nmax):
