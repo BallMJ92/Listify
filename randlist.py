@@ -29,4 +29,42 @@ def random_primes(nmin, nmax):
                 randPrimes.append(n)
                 param = True        
 
-    return randPrimes  
+    return randPrimes
+
+def random_negatives(nmin, nmax):
+    randNeg = []
+
+    for i in range(nmin, nmax):
+        n = randint(-1000, 0)
+        randNeg.append(n)
+
+    return randNeg
+
+def random_posneg(nmin, nmax):
+    randMix = []
+
+    for i in range(nmin, nmax):
+        n = randint(-1000, 1000)
+        randMix.append(n)
+
+    return randMix
+
+def random_binary(nmin, nmax):
+    randBin = []
+
+    for i in range(nmin, nmax):
+        n = randint(0, 1000)
+        y = bin(n)
+        randBin.append(y)
+
+    return randBin
+
+def random_hex(nmin, nmax):
+    randHex = []
+
+    for i in range(nmin, nmax):
+        n = randint(0, 1000)
+        y = hex(n)
+        randHex.append(y)
+
+    return randHex
