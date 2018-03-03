@@ -1,4 +1,5 @@
-from random import randint
+from decimal import Decimal
+from random import randint, random
 
 def random_numbers(nmin, nmax):
     """Generates a list of random numbers between
@@ -10,7 +11,19 @@ def random_numbers(nmin, nmax):
         n = randint(-1000, 1000)
         randNums.append(n)
 
-    return randNums        
+    return randNums
+
+def random_decimals(nmin, nmax):
+    """Generates a list of random decimals between
+    nmin and nmax
+    """
+    randDec = []
+
+    for i in range(nmin, nmax):
+        n = float(randint(0, 1000) + Decimal(random() / random()))
+        randDec.append(n)
+
+    return randDec  
 
 def random_primes(nmin, nmax):
     """Generates a list of random prime numbers between
@@ -173,6 +186,7 @@ def random_hex_matrix(nmin, nmax, depth):
     randHexMat = []
 
     for i in range(nmin, nmax):
+        d = []
         for n in range(depth):
             x = randint(0, 1000)
             d.append(hex(x))
@@ -188,9 +202,27 @@ def random_oct_matrix(nmin, nmax, depth):
     randOctMat = []
 
     for i in range(nmin, nmax):
+        d = []
         for n in range(depth):
             x = randint(0, 1000)
             d.append(oct(x))
         randOctMat.append(d)
 
     return randOctMat
+
+def random_dec_matrix(nmin, nmax, depth):
+    """Generates a matrix of random decimal values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
+    randDecMat = []
+
+    for i in range(nmin, nmax):
+        d = []
+        for n in range(depth):
+            x = float(randint(0, 1000) + Decimal(random() / random()))
+            d.append(x)
+        randDecMat.append(d)
+
+    return randDecMat
+
