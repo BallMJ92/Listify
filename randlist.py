@@ -88,6 +88,19 @@ def random_hex(nmin, nmax):
 
     return randHex
 
+def random_oct(nmin, nmax):
+    """Generates a list of random octal values derived
+    from random numbers between nmin and nmax
+    """
+    randOct = []
+
+    for i in range(nmin, nmax):
+        n = randOct(-1000, 1000)
+        y = hex(n)
+        randOct.append(y)
+
+    return randOct
+
 def random_number_matrix(nmin, nmax, depth):
     """Generates a matrix of random numbers between
     nmin and nmax with the depth of the matrix defined
@@ -166,3 +179,18 @@ def random_hex_matrix(nmin, nmax, depth):
         randHexMat.append(d)
 
     return randHexMat
+
+def random_oct_matrix(nmin, nmax, depth):
+    """Generates a matrix of random octal values derived
+    from random numbers between nmin and nmax with the depth
+    of the matrix defined by depth variable
+    """
+    randOctMat = []
+
+    for i in range(nmin, nmax):
+        for n in range(depth):
+            x = randint(0, 1000)
+            d.append(oct(x))
+        randOctMat.append(d)
+
+    return randOctMat
