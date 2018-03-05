@@ -30,7 +30,7 @@ def random_primes(nmin, nmax):
     nmin and nmax
     """
     randPrimes = []        
-
+    
     def recPrime(i):
         def primeDetect(i, x):
             if x == 1:
@@ -43,7 +43,7 @@ def random_primes(nmin, nmax):
         param = False
 
         while param == False:
-            n = randint(0, 1000)
+            n = randint(1, 1000)
             if recPrime(n) == True:
                 randPrimes.append(n)
                 param = True        
@@ -108,8 +108,8 @@ def random_oct(nmin, nmax):
     randOct = []
 
     for i in range(nmin, nmax):
-        n = randOct(-1000, 1000)
-        y = hex(n)
+        n = randint(-1000, 1000)
+        y = oct(n)
         randOct.append(y)
 
     return randOct
@@ -257,4 +257,3 @@ def random_negative_dec_matrix(nmin, nmax, depth):
         randNegDecMat.append(d)
 
     return randNegDecMat
-
