@@ -6,5 +6,5 @@ A Python module containing functions for generating a variety of predefined, or 
 
 **rnlm.py** - *Contains functions for generating semi-random numerical data sets*
 
-**rs.py** - *Contains functions for generating semi-random string data sets*
+**rslm.py** - *Contains functions for generating semi-random string data sets*
 
