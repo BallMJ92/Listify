@@ -1,5 +1,6 @@
 from decimal import Decimal
 from random import randint, random
+import csv
 
 def random_numbers(nmin, nmax):
     """Generates a list of random numbers between
@@ -257,3 +258,14 @@ def random_negative_dec_matrix(nmin, nmax, depth):
         randNegDecMat.append(d)
 
     return randNegDecMat
+
+def tabular(matrix):
+    """Presents Matrix in tabular format"""
+    return '\n'.join(' '.join(map(str,matrix)) for x in matrix)
+
+def export(filename, l):
+    """Exports list or matrix to csv file"""
+    with open(filename, "w") as export:
+        writer = csv.writer(export)
+        writer.writerows(l)
+
