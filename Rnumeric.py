@@ -2,7 +2,7 @@ from decimal import Decimal
 from random import randint, random
 import csv
 
-def random_numbers(nmin, nmax):
+def nlist(nmin, nmax):
     """Generates a list of random numbers between
     nmin and nmax
     """
@@ -14,7 +14,7 @@ def random_numbers(nmin, nmax):
 
     return randNums
 
-def random_decimals(nmin, nmax):
+def dlist(nmin, nmax):
     """Generates a list of random decimals between
     nmin and nmax
     """
@@ -26,7 +26,7 @@ def random_decimals(nmin, nmax):
 
     return randDec  
 
-def random_primes(nmin, nmax):
+def plist(nmin, nmax):
     """Generates a list of random prime numbers between
     nmin and nmax
     """
@@ -51,7 +51,7 @@ def random_primes(nmin, nmax):
 
     return randPrimes
 
-def random_positives(nmin, nmax):
+def poslist(nmin, nmax):
     """Generate a list of random positive numbers between
     nmin and nmax
     """
@@ -63,7 +63,7 @@ def random_positives(nmin, nmax):
 
     return randPos
 
-def random_negatives(nmin, nmax):
+def neglist(nmin, nmax):
     """Generates a list of random negative numbers between
     nmin and nmax
     """
@@ -76,7 +76,7 @@ def random_negatives(nmin, nmax):
     return randNeg
 
 
-def random_binary(nmin, nmax):
+def binlist(nmin, nmax):
     """Generates a list of random binary values derived
     from random numbers between nmin and nmax
     """
@@ -89,7 +89,7 @@ def random_binary(nmin, nmax):
 
     return randBin
 
-def random_hex(nmin, nmax):
+def hexlist(nmin, nmax):
     """Generates a list of random hexadecimal values derived
     from random numbers between nmin and nmax
     """
@@ -102,7 +102,7 @@ def random_hex(nmin, nmax):
 
     return randHex
 
-def random_oct(nmin, nmax):
+def octlist(nmin, nmax):
     """Generates a list of random octal values derived
     from random numbers between nmin and nmax
     """
@@ -115,7 +115,7 @@ def random_oct(nmin, nmax):
 
     return randOct
 
-def random_number_matrix(nmin, nmax, depth):
+def nummat(nmin, nmax, depth):
     """Generates a matrix of random numbers between
     nmin and nmax with the depth of the matrix defined
     by depth variable
@@ -131,7 +131,7 @@ def random_number_matrix(nmin, nmax, depth):
 
     return randNumMatrix
 
-def random_positive_matrix(nmin, nmax, depth):
+def posmat(nmin, nmax, depth):
     """Generates a matrix of random positive numbers between
     nmin and nmax with the depth of the matrix defined
     by depth variable
@@ -147,7 +147,7 @@ def random_positive_matrix(nmin, nmax, depth):
 
     return randPosMatrix
 
-def random_negative_matrix(nmin, nmax, depth):
+def negmat(nmin, nmax, depth):
     """Generates a matrix of random negative numbers between
     nmin and nmax with the depth of the matrix defined
     by depth variable
@@ -163,7 +163,7 @@ def random_negative_matrix(nmin, nmax, depth):
 
     return randNegMatrix
 
-def random_binary_matrix(nmin, nmax, depth):
+def binmat(nmin, nmax, depth):
     """Generates a matrix of random binary values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -179,7 +179,7 @@ def random_binary_matrix(nmin, nmax, depth):
 
     return randBinMat
 
-def random_hex_matrix(nmin, nmax, depth):
+def hexmat(nmin, nmax, depth):
     """Generates a matrix of random hexadecimal values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -195,7 +195,7 @@ def random_hex_matrix(nmin, nmax, depth):
 
     return randHexMat
 
-def random_oct_matrix(nmin, nmax, depth):
+def octmat(nmin, nmax, depth):
     """Generates a matrix of random octal values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -211,7 +211,7 @@ def random_oct_matrix(nmin, nmax, depth):
 
     return randOctMat
 
-def random_dec_matrix(nmin, nmax, depth):
+def dmat(nmin, nmax, depth):
     """Generates a matrix of random decimal values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -227,7 +227,7 @@ def random_dec_matrix(nmin, nmax, depth):
 
     return randDecMat
 
-def random_positive_dec_matrix(nmin, nmax, depth):
+def dposmat(nmin, nmax, depth):
     """Generates a matrix of random positive decimal values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -243,7 +243,7 @@ def random_positive_dec_matrix(nmin, nmax, depth):
 
     return randPosDecMat
 
-def random_negative_dec_matrix(nmin, nmax, depth):
+def dnegmat(nmin, nmax, depth):
     """Generates a matrix of random negative decimal values derived
     from random numbers between nmin and nmax with the depth
     of the matrix defined by depth variable
@@ -269,3 +269,6 @@ def export(filename, l):
         writer = csv.writer(export)
         writer.writerows(l)
 
+def avlist(l):
+    """Gets average of all elements in list or matrix"""
+    return sum(l) / float(len(l))
