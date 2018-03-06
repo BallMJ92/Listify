@@ -263,7 +263,7 @@ def tabular(matrix):
     """Presents Matrix in tabular format"""
     return '\n'.join(' '.join(map(str,matrix)) for x in matrix)
 
-def export(filename, l):
+def exmat(filename, l):
     """Exports list or matrix to csv file"""
     with open(filename, "w") as export:
         writer = csv.writer(export)
@@ -272,3 +272,8 @@ def export(filename, l):
 def avlist(l):
     """Gets average of all elements in list or matrix"""
     return sum(l) / float(len(l))
+
+def tramat(matrix):
+    """Transposes matrix"""
+    transpose = list(zip(*matrix))
+    return transpose
